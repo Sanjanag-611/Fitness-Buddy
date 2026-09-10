@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fitness Buddy 💪 – AI Health Coach</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <!-- Sidebar -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <div class="logo">
+        <div class="logo-icon">🏋️</div>
+        <span class="logo-text">Fitness Buddy</span>
+      </div>
+      <button class="sidebar-toggle" id="sidebarToggle" title="Toggle sidebar">&#9776;</button>
+    </div>
+
+    <nav class="quick-actions">
+      <p class="nav-label">Quick Start</p>
+      <button class="quick-btn" data-prompt="Create a beginner home workout plan for me with no equipment.">
+        <span class="btn-icon">🏠</span> Home Workout Plan
+      </button>
+      <button class="quick-btn" data-prompt="Give me a motivational tip and daily fitness inspiration.">
+        <span class="btn-icon">🔥</span> Daily Motivation
+      </button>
+      <button class="quick-btn" data-prompt="Suggest a simple, healthy and nutritious meal plan for today.">
+        <span class="btn-icon">🥗</span> Meal Ideas
+      </button>
+      <button class="quick-btn" data-prompt="Help me build a consistent fitness habit and daily routine.">
+        <span class="btn-icon">📅</span> Habit Building
+      </button>
+      <button class="quick-btn" data-prompt="What are the best exercises for weight loss at home?">
+        <span class="btn-icon">⚡</span> Weight Loss Tips
+      </button>
+      <button class="quick-btn" data-prompt="How should I recover after a hard workout? Tips for muscle recovery.">
+        <span class="btn-icon">💆</span> Recovery Tips
+      </button>
+    </nav>
+
+    <div class="sidebar-footer">
+      <div class="ai-badge">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM" class="ibm-logo"/>
+        <span>Powered by IBM Granite</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main" id="main">
+    <!-- Top Bar -->
+    <header class="topbar">
+      <button class="menu-btn" id="menuBtn" title="Menu">&#9776;</button>
+      <div class="topbar-title">
+        <span class="status-dot"></span>
+        <span>Fitness Buddy AI Coach</span>
+      </div>
+      <button class="clear-btn" id="clearBtn" title="New conversation">&#43; New Chat</button>
+    </header>
+
+    <!-- Chat Area -->
+    <div class="chat-area" id="chatArea">
+      <!-- Welcome Screen -->
+      <div class="welcome-screen" id="welcomeScreen">
+        <div class="welcome-hero">
+          <div class="hero-icon">💪</div>
+          <h1>Welcome to Fitness Buddy</h1>
+          <p class="hero-subtitle">Your AI-powered personal health & fitness coach. Ask me anything about workouts, nutrition, motivation, or habit building!</p>
+        </div>
+        <div class="feature-cards">
+          <div class="feature-card" data-prompt="Create a beginner home workout plan for me with no equipment.">
+            <div class="feature-icon">🏠</div>
+            <h3>Home Workouts</h3>
+            <p>Personalized routines you can do anywhere, no gym needed.</p>
+          </div>
+          <div class="feature-card" data-prompt="Give me a motivational tip and daily fitness inspiration.">
+            <div class="feature-icon">🔥</div>
+            <h3>Daily Motivation</h3>
+            <p>Stay inspired and energized with fitness tips every day.</p>
+          </div>
+          <div class="feature-card" data-prompt="Suggest a simple, healthy and nutritious meal plan for today.">
+            <div class="feature-icon">🥗</div>
+            <h3>Nutrition Guidance</h3>
+            <p>Simple, nutritious meal ideas to fuel your fitness journey.</p>
+          </div>
+          <div class="feature-card" data-prompt="Help me build a consistent fitness habit and daily routine.">
+            <div class="feature-icon">📅</div>
+            <h3>Habit Building</h3>
+            <p>Build lasting fitness habits and stay consistent long-term.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Messages -->
+      <div class="messages" id="messages"></div>
+    </div>
+
+    <!-- Input Area -->
+    <div class="input-area">
+      <div class="input-wrapper">
+        <textarea
+          id="userInput"
+          placeholder="Ask your Fitness Buddy anything… workouts, meals, motivation!"
+          rows="1"
+          maxlength="2000"
+        ></textarea>
+        <button id="sendBtn" class="send-btn" title="Send message">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="22" y1="2" x2="11" y2="13"/>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+          </svg>
+        </button>
+      </div>
+      <p class="input-hint">Fitness Buddy can make mistakes. Always consult a healthcare professional for medical advice.</p>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
